@@ -1,9 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send({ hi: 'there'});
-});
+require('./routes/authRoutes')(app);
+require('./models/User');
+require('./services/passport'); // referência sem retorno para o carregamento das configurações
+
+mongoose.connect(keys.mongoURI);
 
 const PORT = process.env.PORT || 5000;
 
