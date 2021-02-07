@@ -1,12 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
+require('./models/User');
+require('./services/passport'); // referência sem retorno para o carregamento das configurações
 
 const app = express();
 
 require('./routes/authRoutes')(app);
-require('./models/User');
-require('./services/passport'); // referência sem retorno para o carregamento das configurações
 
 mongoose.connect(keys.mongoURI);
 
