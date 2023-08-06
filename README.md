@@ -5,6 +5,7 @@ README da aplicação MailSurvey para criação e veiculação de questionários
 # Histórico de Atualizações
 
 * 05/08/23 - Publicada primeira versão da aplicação com GoogleAuth e MongoDB configurados
+* 
 
 # Pré-Requisitos
 
@@ -34,11 +35,13 @@ Execute o comando 'npm run dev' para executar a aplicação.
 
 # User Stories
 
-[us:1] O usuário pode autorizar acesso a aplicação MailSurvey utilizando sua conta do Google.
+[us:1] Os usuários podem se autenticar utilizando o padrão OAuth de maneira que possam confiar na autenticação de provedores de sua confiança como Google, LinkedIn, etc.
 
-[us:2] O sistema retornará armazena o GoogleID do usuário em uma base de dados MongoDB para possibilitar o controle de acesso e o vínculo do usuário com recursos disponibilizados pelo sistema.
+[us:1.1] O usuário pode autorizar acesso a aplicação MailSurvey utilizando sua conta do Google.
 
-[us:3] ...
+[us:1.2] O sistema retornará armazena o GoogleID do usuário em uma base de dados MongoDB para possibilitar o controle de acesso e o vínculo do usuário com recursos disponibilizados pelo sistema.
+
+[us:2] ...
 
 
 
