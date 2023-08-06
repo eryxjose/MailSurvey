@@ -30,8 +30,8 @@ app.use(cookieSession({
 //     cookie: { maxAge: 24 * 60 * 60 * 1000 } // 1 dia de validade do cookie
 // }));
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 //const authRoutes = require('./routes/authRoutes');
 require('./routes/authRoutes')(app);
