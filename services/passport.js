@@ -26,18 +26,14 @@ passport.use(new GoogleStrategy({
         callbackURL: 'https://wide-fork-production.up.railway.app/auth/google/callback',
         proxy: true // garante que o proxy do provedor Railway permita o uso de redirecionamento http
     }, async (accessToken, refreshToken, profile, done) => {
-        // console.log('access token', accessToken);
-        // console.log('refresh token', refreshToken);
-        console.log('profile' + profile.id);
         const existingUser = await User.findOne({googleId: profile.id})
-        console.log('--->>'+existingUser);
+
         if (existingUser) {
-            // already exists
             done(null, existingUser);
-        } else {
-            const user = await new User({ googleId: profile.id }).save()
-            done(null, user);
-        }
+        } 
+        
+        const user = await new User({ googleId: profile.id }).save()
+        done(null, user); 
     })
 );
 
