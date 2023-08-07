@@ -12,10 +12,9 @@ if (process.env.NODE_ENV === 'production') {
 } else {
     // return dev keys
     module.exports = {
-        googleClientID: '253993098754-hhcbs2712upgrgl1isd6rd1mlglgbdvb.apps.googleusercontent.com',
-        googleClientSecret: 'cZzfYjFjohwzwCkK_Wec8OiG',
+        googleClientID: '175922520607-ngrpmiv4gfb3n0q6oe06b93g89tbdjls.apps.googleusercontent.com',
+        googleClientSecret: 'IaMi5gWasief11IdmwGOaCZv',
         mongoURI: 'mongodb+srv://mailsurvey:OrPNZD07OYl0oW0H@cluster0.owrsn.mongodb.net/?retryWrites=true&w=majority',
-        //mongoURI: 'mongodb+srv://mailsurvey:OrPNZD07OYl0oW0H@cluster0.owrsn.mongodb.net/?retryWrites=true&w=majority',
         cookieKey: 'slkajflsdkjlksdjflksjdfwerwer'
     };
 }
