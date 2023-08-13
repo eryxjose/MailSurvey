@@ -23,6 +23,8 @@ Execute o comando 'npm run dev' para executar a aplicação.
 # Tecnologias Client-Side
 
 * ReactJS
+* (Materialize CSS)[https://materializecss.com/]
+* (MaterialUI)[www.material-ui.com]
 
 # Tecnologias Server-Side
 

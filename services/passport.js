@@ -21,9 +21,9 @@ passport.deserializeUser((id, done) => { // id from the user to deserialize
 
 
 passport.use(new GoogleStrategy({
-        clientID: '471753917860-qjp907bnktrrggd62qen66t8k4a31bjv.apps.googleusercontent.com', //253993098754-hhcbs2712upgrgl1isd6rd1mlglgbdvb.apps.googleusercontent.com
-        clientSecret: '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',
-        callbackURL: 'https://wide-fork-production.up.railway.app/auth/google/callback',
+        clientID: keys.googleClientID,
+        clientSecret: keys.googleClientSecret,
+        callbackURL: '/auth/google/callback',
         proxy: true // garante que o proxy do provedor Railway permita o uso de redirecionamento http
     }, async (accessToken, refreshToken, profile, done) => {
         const existingUser = await User.findOne({googleId: profile.id})
