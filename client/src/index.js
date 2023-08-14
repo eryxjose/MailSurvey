@@ -20,3 +20,6 @@ root.render(
         <App />
     </Provider>
 );
+
+// console.log('STRIPE KEY: ', process.env.REACT_APP_STRIPE_KEY);
+// console.log('Environment: ', process.env.NODE_ENV);
