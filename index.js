@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 //const session = require('express-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 // Não é necessário atribuir o retorno de passport, 
 // apenas requerer o passport para executar
@@ -12,6 +13,8 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+app.use(bodyParser.json());
 
 //teste acesso
 // app.get('/', (req, res) => {
@@ -35,6 +38,7 @@ app.use(passport.session());
 
 //const authRoutes = require('./routes/authRoutes');
 require('./routes/authRoutes')(app);
+require('./routes/billingRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
  
