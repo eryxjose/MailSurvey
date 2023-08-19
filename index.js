@@ -8,6 +8,7 @@ const keys = require('./config/keys');
 // Não é necessário atribuir o retorno de passport, 
 // apenas requerer o passport para executar
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -39,6 +40,7 @@ app.use(passport.session());
 //const authRoutes = require('./routes/authRoutes');
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
